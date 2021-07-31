@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block content %}
+<form action="/edit/{{team.id}}" method="post">
+    <div class="row">
+        <div class="col">
+            <label for="team_name">Team Name</label>
+            <input id="team_name" type="text" class="form-control" placeholder="Team Name" name="team_name" value="{{team.team_name}}">
+        </div>
+
+        <div class="col">
+            <label for="salary_in_millions">Team Salary In Millions</label>
+            <input id="salary_in_millions" type="text" class="form-control" placeholder="Salary In Millions" name="salary_in_millions" value="{{team.salary_in_millions}}">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <label for="wins">Wins</label>
+            <input id="wins" type="text" class="form-control" placeholder="Wins" name="wins" value="{{team.wins}}">
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-success">Save</button>
+
+</form>
+{% endblock %}
+

@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block content %}
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">Team Name</th>
+        <th scope="col">Salary In Millions</th>
+        <th scope="col">Wins</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for team in teams %}
+    <tr>
+        <td><a href="view/{{team.id}}">{{ team.team_name }}</a></td>
+        <td>{{ team.salary_in_millions }}</td>
+        <td>{{ team.wins }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

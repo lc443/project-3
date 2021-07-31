@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block content %}
+<br/>
+<div class="card" class="m-5 p-2">
+    <br/>
+    <div class="container">
+    <h5 class="card-title">{{ team.team_name }}</h5>
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">{{ team.salary_in_millions }}</li>
+        <br/>
+        <li class="list-group-item">{{ team.wins }}</li>
+    </ul>
+      <br/>
+    <div class="card-body">
+        <a href="/edit/{{team.id}}" class="card-link btn btn-primary">edit</a>
+    </div>
+</div>
+  <br/>
+<form action="/delete/{{team.id}}" method="post"><button type="submit" class="btn btn-danger">Delete</button></form>
+
+
+{% endblock %}
+

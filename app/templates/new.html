@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block content %}
+<form action="/teams/new" method="POST">
+    <div class="row">
+        <div class="col">
+            <label for="team_name">Team Name</label>
+            <input id="team_name" type="text" class="form-control" placeholder="Team Name" name="team_name">
+        </div>
+        <div class="col">
+            <label for="salary_in_millions">Salary In Millions</label>
+            <input id="salary_in_millions" type="text" class="form-control" placeholder="salary_in_millions"
+                   name="salary_in_millions">
+        </div>
+        <div class="col">
+            <label for="wins">Wins</label>
+            <input id="wins" type="text" class="form-control" placeholder="Wins" name="wins">
+        </div>
+    </div>
+
+    </div>
+    <button type="submit" class="btn btn-success">Success</button>
+
+</form>
+
+{% endblock %}
+
